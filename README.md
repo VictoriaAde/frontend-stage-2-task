@@ -1,4 +1,4 @@
-# HERE IS YOUR FRONT-END STAGE TWO(2) TASK
+# FRONT-END STAGE TWO(2) TASK
 
 ### :bulb:Primary Reading materials
 
@@ -32,6 +32,7 @@ Add another anchor tag styled as a Button with an id of 'contact' that redirects
 3. Make sure you Implement the UI Design on Figma and also Follow all the instructions here.
 4. You Must Deploy to Netlify, Vercel, or GitHub Pages ONLY. (if you host anywhere else and the test fails for you, its no mentor's fault).
 5. You Must make frequent atomic commits to your GitHub repository and keep standard on commit messages.
+
    > Example:
 
 - feat: The new feature you're adding to a particular application
@@ -41,6 +42,7 @@ Add another anchor tag styled as a Button with an id of 'contact' that redirects
 - test: Everything related to testing
 - docs: Everything related to documentation
 - chore: Regular code maintenance.
+  <br>
   `in this manner git commit -m "feat: The new feature you're adding to a particular application"`
 
 ### :bulb: NB:

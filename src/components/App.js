@@ -1,14 +1,18 @@
-import Footer from "./Footer";
-import Header from "./Header";
-import Main from "./Main";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Contact from './Contact';
+
+import Footer from './Footer';
+import Profile from './Profile';
 
 function App() {
   return (
-    <div className="flex flex-col items-center py-12 bg-milk">
-      <Header />
-      <Main />
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/" element={<Profile />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
       <Footer />
-    </div>
+    </BrowserRouter>
   );
 }
 

@@ -1,3 +1,7 @@
+import { Link } from 'react-router-dom';
+import githubIcon from '../images/github.svg';
+import slackIcon from '../images/slack.svg';
+
 const Main = () => {
   return (
     <main className="flex flex-col gap-6 text-center w-11/12 lg:w-9/12">
@@ -43,11 +47,18 @@ const Main = () => {
       >
         Design Books
       </a>
+      <Link
+        to={`/contact`}
+        id="contact"
+        className="py-6 px-6 text-gray-dark font-medium bg-gray-light hover:bg-hover-gray rounded-lg text-sm lg:text-lg"
+      >
+        Contact Me{' '}
+      </Link>
       <div className="flex justify-center gap-6 mb-20 mt-5">
         <a href="https://github.com/VictoriaAde">
-          <img src={require("../images/github.svg")} alt="github icon" />
+          <img src={githubIcon} alt="github icon" />
         </a>
-        <img src={require("../images/slack.svg")} alt="slack icon" />
+        <img src={slackIcon} alt="slack icon" />
       </div>
     </main>
   );

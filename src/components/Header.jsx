@@ -1,16 +1,21 @@
+import shareBtn from '../images/share-button.svg';
+import hamburgerBtn from '../images/hamburger-button.svg';
+import profileImg from '../images/profile-img.svg';
+import cameraIcon from '../images/camera.svg';
+
 const Header = () => {
   return (
     <div>
       <div className="absolute top-9 right-9">
         <img
-          src={require("../images/hamburger-button.svg")}
+          src={hamburgerBtn}
           alt="Hamburger / menu button"
           className=" md:hidden cursor-pointer"
         />
       </div>
       <div className="absolute top-9 right-44	">
         <img
-          src={require("../images/share-button.svg")}
+          src={shareBtn}
           alt="Click on this icon to share this profile"
           className="hidden md:block cursor-pointer"
         />
@@ -18,14 +23,14 @@ const Header = () => {
       <header className="relative">
         <div className="mt-5 relative">
           <img
-            src={require("../images/profile-img.svg")}
+            src={profileImg}
             alt="The profile"
             id="profile__img"
             className=" profile_img mx-auto cursor-pointer w-24 h-24"
           />
           <div className="profile_overlay absolute top-0 md:left-1 opacity-50 bg-trans-dark rounded-full w-24 h-24 cursor-pointer hidden transition-all">
             <img
-              src={require("../images/camera.svg")}
+              src={cameraIcon}
               alt="camera icon"
               className="absolute bottom-3 left-9"
             />
