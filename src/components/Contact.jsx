@@ -1,7 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const Contact = () => {
+  const [setValue] = useState('');
+
+  const handleSubmit = (event) => {
+    alert('message sent');
+    event.preventDefault();
+    event.target.reset();
+  };
+
   return (
     <main className=" bg-milk">
       <h1 className="text-gray-dark pb-8 pt-3 pl-5 md:ml-24 md:pt-8">
@@ -16,7 +25,7 @@ const Contact = () => {
           <p className="text-lg md:text-xl mb-12 text-light">
             Hi there, contact me to ask me about anything you have in mind.
           </p>
-          <form className="w-full max-w-xl">
+          <form onSubmit={handleSubmit} className="w-full max-w-xl">
             <div className="flex flex-wrap -mx-3 mb-6">
               <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label className="block tracking-wide text-mblack text-sm font-semibold mb-2">
@@ -25,6 +34,11 @@ const Contact = () => {
                 <input
                   className="block w-full bg-milk text-gray-dark placeholder:focus:text-gray-dark border border-lighter_gray rounded py-3 px-4 mb-3 leading-tight focus:outline-none"
                   type="text"
+                  name="name"
+                  id="first_name"
+                  onChange={(e) => {
+                    setValue(e.target.value);
+                  }}
                   placeholder="Enter your first name"
                   required
                 />
@@ -36,6 +50,11 @@ const Contact = () => {
                 <input
                   className="block w-full bg-milk text-gray-dark placeholder:focus:text-gray-dark border border-lighter_gray rounded py-3 px-4 mb-3 leading-tight focus:outline-none"
                   type="text"
+                  name="name"
+                  id="last_name"
+                  onChange={(e) => {
+                    setValue(e.target.value);
+                  }}
                   placeholder="Enter your last name"
                   required
                 />
@@ -46,7 +65,12 @@ const Contact = () => {
                 </label>
                 <input
                   className="block w-full bg-milk text-gray-dark placeholder:focus:text-gray-dark border border-lighter_gray rounded py-3 px-4 mb-3 leading-tight focus:outline-none"
-                  type="text"
+                  type="email"
+                  name="email"
+                  id="email"
+                  onChange={(e) => {
+                    setValue(e.target.value);
+                  }}
                   placeholder="yourname@email.com"
                   required
                 />
@@ -56,8 +80,12 @@ const Contact = () => {
                   Message
                 </label>
                 <textarea
-                  id="comment"
+                  id="message"
+                  name="message"
                   rows="4"
+                  onChange={(e) => {
+                    setValue(e.target.value);
+                  }}
                   className="block w-full bg-milk text-gray-dark placeholder:focus:text-gray-dark placeholder:focus:content-[hey] border border-lighter_gray rounded py-3 px-4 mb-3 leading-tight focus:outline-none"
                   placeholder="Send me a message and I will reply you as soon as possible..."
                   required
@@ -66,7 +94,9 @@ const Contact = () => {
 
               <div className="w-full px-3 pt-8">
                 <button
-                  type="button"
+                  type="submit"
+                  name="buuton"
+                  id="btn__submit"
                   class="mb-2 w-full py-3 inline-block bg-primary text-white font-semibold text-sm rounded-md shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
                 >
                   Send message
