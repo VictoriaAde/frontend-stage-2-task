@@ -1,20 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import Alert from './alert/Alert';
 
 const Contact = () => {
-  const [setValue] = useState('');
+  const [value, setValue] = useState({});
+  const [showAlert, setShowAlert] = useState(false);
 
   const handleSubmit = (event) => {
-    alert('message sent');
+    // alert('message sent');
     event.preventDefault();
-    event.target.reset();
+    // event.target.reset();
+    setShowAlert(true);
   };
+
+  // const alertMessage = () => {
+  //   let success = document.querySelector('success');
+  //   console.log(success);
+  //   alert('message sent');
+  // };
 
   return (
     <main className=" bg-milk">
       <h1 className="text-gray-dark pb-8 pt-3 pl-5 md:ml-24 md:pt-8">
-        {' '}
         <Link to="/">Go back</Link>
       </h1>
       <div className="flex flex-col items-center py-12">
@@ -25,6 +33,14 @@ const Contact = () => {
           <p className="text-lg md:text-xl mb-12 text-light">
             Hi there, contact me to ask me about anything you have in mind.
           </p>
+          {showAlert && (
+            <Alert
+              message="Successful"
+              interval={2000}
+              action="success"
+              clear={() => setShowAlert(false)}
+            />
+          )}
           <form onSubmit={handleSubmit} className="w-full max-w-xl">
             <div className="flex flex-wrap -mx-3 mb-6">
               <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
@@ -100,7 +116,7 @@ const Contact = () => {
                   may contact you.
                 </span>
               </div>
-              <div className="w-full px-3 pt-8">
+              <div className="w-full px-3 mt-14 md:mt-6">
                 <button
                   type="submit"
                   id="btn__submit"
@@ -108,6 +124,8 @@ const Contact = () => {
                 >
                   Send message
                 </button>
+
+                <h1 className="success hidden">Submitted successfully </h1>
               </div>
             </div>
           </form>
