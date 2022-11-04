@@ -34,7 +34,6 @@ const Contact = () => {
                 <input
                   className="block w-full bg-milk text-base text-gray-dark placeholder:focus:text-mblack border border-lighter_gray rounded py-3 px-4 mb-3 leading-tight focus:border-lighter_gray focus:outline-none"
                   type="text"
-                  name="name"
                   id="first_name"
                   onChange={(e) => {
                     setValue(e.target.value);
@@ -50,7 +49,6 @@ const Contact = () => {
                 <input
                   className="block w-full text-base bg-milk text-gray-dark placeholder:focus:text-mblack border border-lighter_gray rounded py-3 px-4 mb-3 leading-tight focus:outline-none"
                   type="text"
-                  name="name"
                   id="last_name"
                   onChange={(e) => {
                     setValue(e.target.value);
@@ -66,7 +64,6 @@ const Contact = () => {
                 <input
                   className="block w-full text-base bg-milk text-gray-dark placeholder:focus:text-mblack border border-lighter_gray rounded py-3 px-4 mb-3 leading-tight focus:outline-none"
                   type="email"
-                  name="email"
                   id="email"
                   onChange={(e) => {
                     setValue(e.target.value);
@@ -81,7 +78,6 @@ const Contact = () => {
                 </label>
                 <textarea
                   id="message"
-                  name="message"
                   rows="4"
                   onChange={(e) => {
                     setValue(e.target.value);
@@ -94,6 +90,7 @@ const Contact = () => {
               <div className="w-full px-3 relative">
                 <input
                   type="checkbox"
+                  id="checkbox"
                   required
                   className=" check_shadow w-5 h-5  cursor-pointer mr-3 outline-none accent-milk"
                 />
@@ -106,7 +103,6 @@ const Contact = () => {
               <div className="w-full px-3 pt-8">
                 <button
                   type="submit"
-                  name="buuton"
                   id="btn__submit"
                   className="mb-2 w-full py-3 inline-block bg-primary text-white font-semibold text-base rounded-md shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
                 >
