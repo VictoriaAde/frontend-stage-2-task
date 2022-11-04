@@ -32,7 +32,7 @@ const Contact = () => {
                   First name
                 </label>
                 <input
-                  className="block w-full bg-milk text-gray-dark placeholder:focus:text-gray-dark border border-lighter_gray rounded py-3 px-4 mb-3 leading-tight focus:outline-none"
+                  className="block w-full bg-milk text-base text-gray-dark placeholder:focus:text-mblack border border-lighter_gray rounded py-3 px-4 mb-3 leading-tight focus:border-lighter_gray focus:outline-none"
                   type="text"
                   name="name"
                   id="first_name"
@@ -48,7 +48,7 @@ const Contact = () => {
                   Last name
                 </label>
                 <input
-                  className="block w-full bg-milk text-gray-dark placeholder:focus:text-gray-dark border border-lighter_gray rounded py-3 px-4 mb-3 leading-tight focus:outline-none"
+                  className="block w-full text-base bg-milk text-gray-dark placeholder:focus:text-mblack border border-lighter_gray rounded py-3 px-4 mb-3 leading-tight focus:outline-none"
                   type="text"
                   name="name"
                   id="last_name"
@@ -64,7 +64,7 @@ const Contact = () => {
                   Email
                 </label>
                 <input
-                  className="block w-full bg-milk text-gray-dark placeholder:focus:text-gray-dark border border-lighter_gray rounded py-3 px-4 mb-3 leading-tight focus:outline-none"
+                  className="block w-full text-base bg-milk text-gray-dark placeholder:focus:text-mblack border border-lighter_gray rounded py-3 px-4 mb-3 leading-tight focus:outline-none"
                   type="email"
                   name="email"
                   id="email"
@@ -86,18 +86,29 @@ const Contact = () => {
                   onChange={(e) => {
                     setValue(e.target.value);
                   }}
-                  className="block w-full bg-milk text-gray-dark placeholder:focus:text-gray-dark placeholder:focus:content-[hey] border border-lighter_gray rounded py-3 px-4 mb-3 leading-tight focus:outline-none"
+                  className="block w-full text-base bg-milk text-gray-dark placeholder:focus:text-mblack placeholder:focus:content-[hey] border border-lighter_gray rounded py-3 px-4 mb-6 leading-tight focus:outline-none"
                   placeholder="Send me a message and I will reply you as soon as possible..."
                   required
                 ></textarea>
               </div>
-
+              <div className="w-full px-3 relative">
+                <input
+                  type="checkbox"
+                  required
+                  className=" check_shadow w-5 h-5  cursor-pointer mr-3 outline-none accent-milk"
+                />
+                <span className=" absolute -top-0 left-10  text-base text-mblack">
+                  You agree to providing your data to{' '}
+                  <span className="font-semibold">Victoria Adedayo</span> who
+                  may contact you.
+                </span>
+              </div>
               <div className="w-full px-3 pt-8">
                 <button
                   type="submit"
                   name="buuton"
                   id="btn__submit"
-                  class="mb-2 w-full py-3 inline-block bg-primary text-white font-semibold text-sm rounded-md shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                  className="mb-2 w-full py-3 inline-block bg-primary text-white font-semibold text-base rounded-md shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
                 >
                   Send message
                 </button>
