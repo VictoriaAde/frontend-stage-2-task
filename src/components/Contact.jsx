@@ -18,7 +18,7 @@ const Contact = () => {
       <h1 className="text-gray-dark pb-8 pt-3 pl-5 md:ml-24 md:pt-8">
         <Link to="/">Go back</Link>
       </h1>
-      <div className="flex flex-col items-center py-12">
+      <div className="flex flex-col items-center pt-1 pb-9">
         <div className="py-12 px-7">
           <h1 className="text-4xl leading-10 font-semibold mb-5 text-gray-dark">
             Contact Me
@@ -34,7 +34,7 @@ const Contact = () => {
               clear={() => setShowAlert(false)}
             />
           )}
-          <form onSubmit={handleSubmit} className="w-full max-w-xl">
+          <form onSubmit={handleSubmit} className="w-full max-w-2xl">
             <div className="flex flex-wrap -mx-3 mb-6">
               <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label className="block tracking-wide text-mblack text-sm font-semibold mb-2">
