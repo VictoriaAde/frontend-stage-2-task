@@ -9,7 +9,6 @@ const Alert = ({ message, action, interval, clear = () => null }) => {
     elRef.current.classList = `alert ${
       action === 'success' ? 'bg-primary' : 'bg-red-500'
     }`;
-    console.log('hi');
   }
   useEffect(() => {
     document.getElementById('alert').appendChild(elRef.current);
@@ -17,7 +16,6 @@ const Alert = ({ message, action, interval, clear = () => null }) => {
     let timeOutId = 0;
     timeOutId = setTimeout(() => {
       elRef.current.classList.add('show_alert');
-      // document.getElementById('alert').removeChild(elRef.current);
     }, 200);
     return () => {
       document.getElementById('alert').removeChild(elRef.current);

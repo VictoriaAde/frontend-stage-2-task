@@ -4,13 +4,13 @@ import { useState } from 'react';
 import Alert from './alert/Alert';
 
 const Contact = () => {
-  const [value, setValue] = useState({});
+  const [setValue] = useState({});
   const [showAlert, setShowAlert] = useState(false);
 
   const handleSubmit = (event) => {
     // alert('message sent');
     event.preventDefault();
-    // event.target.reset();
+    event.target.reset();
     setShowAlert(true);
   };
 
@@ -35,7 +35,7 @@ const Contact = () => {
           </p>
           {showAlert && (
             <Alert
-              message="Successful"
+              message="Message Sent!"
               interval={2000}
               action="success"
               clear={() => setShowAlert(false)}
@@ -124,8 +124,6 @@ const Contact = () => {
                 >
                   Send message
                 </button>
-
-                <h1 className="success hidden">Submitted successfully </h1>
               </div>
             </div>
           </form>
