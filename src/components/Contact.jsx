@@ -4,21 +4,14 @@ import { useState } from 'react';
 import Alert from './alert/Alert';
 
 const Contact = () => {
-  const [setValue] = useState({});
   const [showAlert, setShowAlert] = useState(false);
 
   const handleSubmit = (event) => {
-    // alert('message sent');
     event.preventDefault();
     event.target.reset();
     setShowAlert(true);
   };
-
-  // const alertMessage = () => {
-  //   let success = document.querySelector('success');
-  //   console.log(success);
-  //   alert('message sent');
-  // };
+  const setValue = () => {};
 
   return (
     <main className=" bg-milk">
